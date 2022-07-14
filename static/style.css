@@ -1,0 +1,225 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+
+
+.barra {
+	background-color:rgb(247, 98, 12);
+	color:rgb(255, 255, 255);
+	padding: 5px 10px;
+	border-radius:  4px;
+}
+
+
+
+.contenedor2 {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "header"
+						 "contenido"
+						 "footer";
+
+}
+
+.contenedor2 > .div,
+.contenedor2 .header,
+.contenedor2 .contenido,
+.contenedor2 .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor2 .header {
+	background: #077386;
+	color: #fff;
+	grid-area: header;
+}
+
+.contenedor2 .contenido {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	grid-area: contenido;
+}
+
+.contenedor2 .footer {
+	background: #077386;
+	color: #fff;
+	grid-area: footer;
+}
+
+
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header header"
+						 "contenido contenido sidebar sidebar"
+						 "contenido contenido sidebar sidebar"
+						 "footer footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .header {
+	background: #077386;
+	color: #fff;
+	grid-area: header;
+}
+
+.contenedor .contenido {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	grid-area: contenido;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #156de0;
+	text-align: center;
+	/*display: flex; */
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+/*.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+} */
+
+.contenedor .footer {
+	background: #077386;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+		"contenido contenido contenido sidebar"
+		"contenido contenido contenido sidebar"
+		"footer footer footer footer";
+	}
+}
+
+@media screen and (max-width: 320px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+						 "contenido contenido contenido contenido"
+						 "sidebar sidebar sidebar sidebar"
+						 "footer footer footer footer";
+	}
+}
+
+.osteopatas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.ficha{
+    border: 1px solid rgb(167, 167, 165);
+	margin: 10px;
+	
+}
+.osteopata{
+    padding: 10px;
+}
+
+
+
+/*a:hover {
+    background: #FFF;
+    color: #666;
+    padding: 8px 14px;
+    border: 1px solid #888;
+
+    transition-property: all; 
+    transition-duration: 0.5s; 
+    transition-timing-function: ease-in; 
+} */
+
+
+
+
+h4 {
+	background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, rgb(17, 2, 71), transparent, transparent);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-size: 30px;
+	font-family: "Source Sans Pro", sans-serif;
+	-webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+			animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  }
+  @-webkit-keyframes reveal {
+	80% {
+	  letter-spacing: 8px;
+	}
+	100% {
+	  background-size: 300% 300%;
+	}
+  }
+  @keyframes reveal {
+	80% {
+	  letter-spacing: 8px;
+	}
+	100% {
+	  background-size: 300% 300%;
+	}
+  }
+  @-webkit-keyframes glow {
+	40% {
+	  text-shadow: 0 0 8px rgb(58, 47, 218);
+	}
+  }
+  @keyframes glow {
+	40% {
+	  text-shadow: 0 0 8px rgb(58, 47, 218);
+	}
+  }
